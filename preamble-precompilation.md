@@ -66,7 +66,7 @@ pdflatex -ini -jobname="preamble" "&pdflatex preamble.tex\dump"
 ```
 This will create a new file called `preamble.fmt`.
 
-## Optional (Makefile)
+### Optional (Makefile)
 
 If you have `make` installed (a standard tool which you may have without even knowing), then we can tell it this "rule" for creating the `preamble.fmt` file by creating a new file named `Makefile` in the same directory:
 
@@ -83,7 +83,7 @@ preamble: preamble.fmt
 So now running `make preamble.fmt` (or `make preamble` if using the last lines) will create the format file as required. A neat part of using `make` is that it will not bother recreating `preamble.fmt` if it is already newer than it's dependency `preamble.tex`.
 
 
-# Step 3: Compile the main document
+## Step 3: Compile the main document
 
 Now that `preamble.fmt` is created, you can compile the main document referencing this "format file":
 
@@ -95,7 +95,7 @@ pdflatex -fmt preamble <other options> main.tex
 
 If any changes to the preamble are made, make sure to rerun step 2.
 
-## Optional (latexmk)
+### Optional (latexmk)
 
 To avoid remembering this command, stick it in your `latexmkrc` file for the project (in the same directory, or the one where you call `latexmk`):
 ```perl
