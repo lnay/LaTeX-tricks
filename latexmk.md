@@ -19,13 +19,13 @@ This could be a benefit if you...
 - want to reduce your dependence on specific tools
 
 And by "configuration", I mean things including:
-- name and location of the output file ([here](#specify-an-output-location))
-- whether to use `lualatex` or `pdflatex` ([here](#specifying-the-command-to-compile-latex))
+- name and location of the output file ([here](https://lukideangeometry.xyz/blog/latexmk#specify-an-output-location))
+- whether to use `lualatex` or `pdflatex` ([here](https://lukideangeometry.xyz/blog/latexmk#specifying-the-command-to-compile-latex))
 - extra options to pass to the above, such as:
   - whether to ask for interaction when there's an error
   - whether to allow "shell escape" (necessary for some packages)
   - whether to use an existing "format file" (see [preamble precompilation](https://lukideangeometry.xyz/blog/preamble-compilation))
-- locations of extra places for packages or tex files ([here](#specify-extra-locations-to-look-for-files))
+- locations of extra places for packages or tex files ([here](https://lukideangeometry.xyz/blog/latexmk#specify-extra-locations-to-look-for-files))
 - what to do when a file is not found (with the `-use-make` flag, not discussed here)
 
 ## Useful configurations for `latexmk`
