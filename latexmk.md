@@ -70,7 +70,7 @@ $pdflatex = 'lualatex -shell-escape %O %S'; # necessary for some packages which 
 
 ### Specify an output location
 ```perl
-$out_dir = '<OUTPUT_FOLDER>';
+$out_dir = 'OUTPUT_FOLDER';
 # e.g. $out_dir = 'output';
 ```
 Instead of scrolling through a sea of auxiliary files to find the tex file or PDF,
@@ -78,7 +78,7 @@ put the output files (including the PDF) in the location specified.
 
 ### Specify a location for the auxiliary files
 ```perl
-$aux_dir = '<folder>';
+$aux_dir = 'AUX_FOLDER';
 # e.g. $aux_dir = 'aux_files';
 ```
 Put all the auxiliary files (random files produced by LaTeX) in the location specified.
@@ -88,7 +88,7 @@ Also simplifies your `.gitignore` file if you use `git`.
 ### Base name of output files
 LaTeX compilers can be provided with a "jobname" which is used to name the output files, including the PDF.
 ```perl
-$jobname = "PAPER_TITLE";
+$jobname = 'PAPER_TITLE';
 ```
 
 ### Specify extra locations to look for files
@@ -98,7 +98,7 @@ this folder by adding it to the `TEXINPUTS` environment variable.
 This could be done in the command line, in you shell init script (such as `.bashrc`),
 or you could enforce this in the `latexmkrc` file like so:
 ```perl
-ensure_path("TEXINPUTS", "PATH_TO_OTHER_STY_OR_TEX_FILES");
+ensure_path('TEXINPUTS', 'PATH_TO_OTHER_STY_OR_TEX_FILES');
 ```
 However you may want to consider alternatives:
 - put personal preambles or packages in you TEXMF tree
