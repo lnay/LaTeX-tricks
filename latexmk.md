@@ -8,7 +8,10 @@ latexmk -pdf -pvc file.tex
 ```
 This compiles the `file.tex` file to a PDF and opens a preview; but also watches for any changes in relevant files and rebuilds the document when necessary.
 
-## Why should I know about `latexmk`?
+For more of this, check out [this guide](https://mgeier.github.io/latexmk.html) for another introduction to `latexmk` mainly geared around immediate usage advice.
+If after reading that, you want a bit more examples to see whether `latexmk` is for you, read on.
+
+## Why should I know about latexmk?
 
 Even if you use an editor to handle the compilation and preview of your document, there's a good chance that it already uses `latexmk` under the hood, or can be configured to do so.
 This means that by adding a `latexmk` configuration file for your project, you could configure the way your document is built in a way that's agnostic to the editor.
@@ -25,8 +28,9 @@ And by "configuration", I mean things including:
   - whether to ask for interaction when there's an error
   - whether to allow "shell escape" (necessary for some packages)
   - whether to use an existing "format file" (see [preamble precompilation](https://lukideangeometry.xyz/blog/preamble-compilation))
-- locations of extra places for packages or tex files ([here](https://lukideangeometry.xyz/blog/latexmk#specify-extra-locations-to-look-for-files))
+- locations of extra places for packages or `.tex` files ([here](https://lukideangeometry.xyz/blog/latexmk#specify-extra-locations-to-look-for-files))
 - what to do when a file is not found (with the `-use-make` flag, not discussed here)
+- set the PDF viewer to use with the preview `latexmk` options ([here](https://mgeier.github.io/latexmk.html#configuration-files))
 
 ## Useful configurations for `latexmk`
 
